@@ -1,0 +1,49 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ManagementStudents
+#    url: jdbc:postgresql://localhost:5432/test
+    password: Thienphu1
+    username: postgres
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+      
+    show-sql: true
+    generate-ddl: true
+    
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        
+  mail:
+    host: smtp.gmail.com
+    password: nhutaikhoan
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls: 
+            enable: true
+    username: phailamsaonana@gmail.com
+    default-encoding: UTF-8
+  #
+#logging:
+#  level:
+#    org:
+#      hibernate:
+#        SQL: DEBUG
+  gson:
+    disable-inner-class-serialization: false
+
+
+  jackson:
+    default-property-inclusion: non_null
+    date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat
+  jta:
+    atomikos:
+      properties:
+        log-base-name: log
+
+
